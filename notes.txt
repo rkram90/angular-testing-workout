@@ -1,0 +1,21 @@
+Karma is deprecated
+
+
+In Angular versions 16 and 17, jest is introduced as development preview mode.
+
+Jasmine is much slower compare with Jest, and also Jest is popular, it easy to setup jest inside the angular.
+
+Install Jest inside Angular.
+
+1. npm install jest jest-preset-angular @types/jest -D
+
+2. update package with ng test (Jasmine karma) to jest
+
+3. create jest.config.js in root.
+    module.exports = {
+        preset: "jest-preset-angular",
+        setupFilesAfterEnv: ["<rootDir>/setup-jest.ts"]
+    };
+
+4. create setup-jest.ts
+    import 'jest-preset-angular/setup-jest';
